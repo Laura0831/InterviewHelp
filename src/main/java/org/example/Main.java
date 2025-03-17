@@ -28,30 +28,23 @@ public class Main {
         //My Own implementation of LinkedList class
 
         Node head = new Node("Juan");
-        //addElement(head, "Juan");
-       // System.out.println(head.toString());
+
         addElement(head, "Victoria");
         addElement(head, "Laura");
         addElement(head, "Alejandro");
         addElement(head, "Tatiana");
-        System.out.println("This is before removing"+head.toString());
         head = removeEl(head, "Alejandro");
-        System.out.println("this is after removing"+head.toString());
         head = removeEl(head, "Tatiana");
-        System.out.println("this is after removing"+head.toString());
         head = removeEl(head, "Juan");
-        System.out.println("this is after removing"+head.toString());
         head = removeEl(head, "Laura");
-        System.out.println("this is after removing"+head.toString());
         head = removeEl(head, "Victoria");
-        System.out.println("this is after removing"+ head);
-
         head = removeEl(head, "Liz"); //this should return null as there is nothing on the list
 
        head =  addElement(head, "Victoria");
-        System.out.println("this is after adding"+head);
+
 
     }
+
 
     //removes the value passed down in the parameter.
     //Edge Cases:
@@ -85,7 +78,9 @@ public class Main {
         return head;
     }
 
-
+    // adds a new node to the list
+    //edge cases:
+        //it checks if the list is null - it creates a new list
     private static Node addElement(Node head, String newValue){
         if(head == null){
             head = new Node(newValue);
@@ -96,7 +91,6 @@ public class Main {
                 head = head.next;
             }
             head.next = new Node(newValue);
-        //System.out.println(head.toString());
         return head;
     }
 
