@@ -65,6 +65,7 @@ public class Main {
          Node current = head;
          Node previous = current;
 
+         //simple search
          while(current!= null) {
 
              if(current.value.equals(val)) {
@@ -86,7 +87,7 @@ public class Main {
             head = new Node(newValue);
             return head;
         }
-
+        //simple traversing through list
         while(head.next != null){
                 head = head.next;
             }
